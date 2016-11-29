@@ -5,8 +5,9 @@ import ast
 from redbaron import RedBaron
 
 code = """
-class foo:
-    print 'Do you like Vodka?'
+class foo(object):
+    def bar():
+        print 'Do you like Vodka?'
 """
 
 red = RedBaron(code)
