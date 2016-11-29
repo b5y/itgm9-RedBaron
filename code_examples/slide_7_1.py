@@ -12,12 +12,12 @@ red = RedBaron(source_code=source)
 
 functions = red.find_all('DefNode')
 
-print("\nClasse's names:")
+print("\nMethod's names:")
 map(lambda x: print(x.name), functions)
 
 classes = red.find_all('ClassNode')
 
-print("Method's names:\n")
+print("Class's names:\n")
 map(lambda x: print(x.name), classes)
 
 print("\nIndentations:")
