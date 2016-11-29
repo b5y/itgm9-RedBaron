@@ -5,17 +5,20 @@ from __future__ import print_function
 
 from redbaron import RedBaron
 
-with open("input_file.py") as fd:
+with open("input_file.py", 'rb') as fd:
     source = fd.read()
 
 red = RedBaron(source_code=source)
 
 functions = red.find_all('DefNode')
 
-print("\nClasses:")
+print("\nClasse's names:")
 map(lambda x: print(x.name), functions)
 
 classes = red.find_all('ClassNode')
 
-print("Methods:\n")
+print("Method's names:\n")
 map(lambda x: print(x.name), classes)
+
+print("\nIndentations:")
+map(lambda x: print(len(x.indentation)), functions.data)
