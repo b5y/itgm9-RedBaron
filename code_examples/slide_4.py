@@ -6,7 +6,7 @@ from redbaron import RedBaron
 
 code = """
 class foo(object):
-    def bar():
+    def bar(self):
         print 'Do you like Vodka?'
 """
 
