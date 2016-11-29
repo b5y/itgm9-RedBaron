@@ -13,11 +13,9 @@ red = RedBaron(source_code=source)
 functions = red.find_all('DefNode')
 
 print("\nClasses:")
-for function in functions:
-    print(function.name)
+map(lambda x: print(x.name), functions)
 
 classes = red.find_all('ClassNode')
 
 print("Methods:\n")
-for class_ in classes:
-    print(class_.name)
+map(lambda x: print(x.name), classes)
