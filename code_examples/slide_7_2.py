@@ -11,6 +11,9 @@ with open("input_file.py", 'rb') as fd:
 red = RedBaron(source_code=source)
 
 functions = red.find_all('DefNode')
+specific_function = red.find('DefNode', name='buzzy')
+print('Buzzy node:')
+print(specific_function.dumps())
 
 print("Renaming function")
 for function in functions:
